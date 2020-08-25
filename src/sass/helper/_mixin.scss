@@ -1,0 +1,16 @@
+@mixin border($width: 1px, $type: solid, $color: $border-default) {
+    border: $width $type $color;
+}
+
+@mixin button($color: #fff, $bg-color: blue, $b-radius: 4px) {
+    color: $color;
+    border-radius: $b-radius;
+    padding: 15px 15px;
+    border: 0;
+    font-weight: 500;
+    font-size: 18px;
+    min-width: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $bg-color;
+}

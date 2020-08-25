@@ -1,4 +1,94 @@
 @import "./helper/variable";
-body {
-  display: inline;
+@import './helper/mixin';
+@import "./helper/reset";
+@import "./helper/font";
+@import "./partials/base";
+
+.birthday-cal {
+    max-width: 1440px;
+    margin: auto;
+    padding: 70px 50px;
+    h1 {
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 30px;
+        font-weight: 400;
+    }
+}
+
+.bcal-list {
+    list-style: none;
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .bcal-card {
+        width: 175px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        &:last-child {
+            margin-right: auto;
+        }
+    }
+
+    .bcal-card-title {
+        padding: 10px 15px;
+        border-radius: 5px 5px 0 0;
+        background-color: #a6a6fa;
+        text-align: right;
+        text-transform: uppercase;
+        color: #dedede;
+    }
+
+    .bcal-ppl {
+        width: 175px;
+        height: 175px;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        @include border(2px);
+        border-top: 0;
+    }
+}
+
+.bcal-input-wrap {
+    margin-top: 40px;
+    display: flex;
+
+    .bcal-data {
+        width: 60%;
+        margin-right: 40px;
+        textarea {
+            width: 100%;
+            min-height: 400px;
+            @include border();
+            padding: 15px;
+        }
+    }
+
+    .bcal-year {
+        width: 40%;
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+        span {
+            text-transform: capitalize;
+            color: grey;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        input {
+            width: 100%;
+            max-width: 250px;
+            min-height: 40px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            @include border();
+        }
+        button {
+            @include button();
+        }
+    }
 }
