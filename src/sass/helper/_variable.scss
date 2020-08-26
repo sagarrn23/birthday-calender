@@ -1,10 +1,15 @@
-$item1: darkblue;
-$item2: lightgreen;
-$item3: pink;
-$item4: lightblue;
-$item5: red;
-$item6: blue;
-$item7: hotpink;
-$item8: navy;
-$item9: khaki;
+$colors: #555c7c, #9ed600, #c97b97, #76cae7, #e44919, #0250d3, #e35fa9, #64cdff, #ed9809;
+
+$btn-bg: #2c86ef;
+
 $border-default: #dedede;
+
+:root {
+    --bcal-sun: 1fr;
+    --bcal-mon: 1fr;
+    --bcal-tue: 1fr;
+    --bcal-wed: 1fr;
+    --bcal-thu: 1fr;
+    --bcal-fri: 1fr;
+    --bcal-sat: 1fr;
+}

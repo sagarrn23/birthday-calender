@@ -1,0 +1,89 @@
+.bcal-list {
+    list-style: none;
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .bcal-card {
+        width: 175px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-right: auto;
+        }
+
+        &:first-child {
+            order: 1;
+        }
+    }
+
+    .bcal-card-title {
+        padding: 10px 15px;
+        border-radius: 5px 5px 0 0;
+        background-color: #a6a6fa;
+        text-align: right;
+        text-transform: uppercase;
+        color: #dedede;
+    }
+
+    .bcal-ppl {
+        width: 175px;
+        height: 175px;
+        background-color: #fff;
+        display: grid;
+        @include border(2px);
+        border-top: 0;
+
+        li {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+
+            @for $i from 1 through 9 {
+                &:nth-child(9n + #{$i}) {
+                    background-color: nth($colors, $i);
+                }
+            }
+        }
+
+        &:empty {
+            &:before {
+                content: 'No Birthday';
+                justify-content: center;
+            }
+        }
+    }
+
+    .bcal-sun {
+        @include squareGrid(--bcal-sun);
+    }
+
+    .bcal-mon {
+        @include squareGrid(--bcal-mon);
+    }
+
+    .bcal-tue {
+        @include squareGrid(--bcal-tue);
+    }
+
+    .bcal-wed {
+        @include squareGrid(--bcal-wed);
+    }
+
+    .bcal-thu {
+        @include squareGrid(--bcal-thu);
+    }
+
+    .bcal-fri {
+        @include squareGrid(--bcal-fri);
+    }
+
+    .bcal-sat {
+        @include squareGrid(--bcal-sat);
+    }
+}

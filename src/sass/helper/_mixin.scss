@@ -2,7 +2,7 @@
     border: $width $type $color;
 }
 
-@mixin button($color: #fff, $bg-color: blue, $b-radius: 4px) {
+@mixin button($color: #fff, $bg-color: $btn-bg, $b-radius: 4px) {
     color: $color;
     border-radius: $b-radius;
     padding: 15px 15px;
@@ -13,4 +13,10 @@
     text-align: center;
     text-transform: uppercase;
     background-color: $bg-color;
+    cursor: pointer;
+}
+
+@mixin squareGrid($variable) {
+    grid-template-columns: var($variable);
+    grid-template-rows: var($variable);
 }
