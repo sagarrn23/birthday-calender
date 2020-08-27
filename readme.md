@@ -1,3 +1,6 @@
+You can see the demo of the project on - https://sagarchaudhari.me/birthday-calender
+
+Local installation process:-
 1) git clone https://github.com/sagarrn23/birthday-calender.git
 2) cd birthday-calender
 3) npm install
