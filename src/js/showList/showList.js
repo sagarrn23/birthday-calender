@@ -8,6 +8,7 @@ const showList = (finalData) => {
     finalData.forEach(person => {
         try {
             const listNode = document.createElement("LI");
+            listNode.setAttribute('title', person.name);
             const textNode = document.createTextNode(person.alias);
             listNode.appendChild(textNode);
             document.querySelector(`.${days[person.day]}`).appendChild(listNode);

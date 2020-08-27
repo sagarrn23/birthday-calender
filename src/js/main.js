@@ -1,5 +1,4 @@
 import '../sass/main.scss';
-import finalData from './finalData/finalData';
 import setData from './setData/setData';
 import showList from './showList/showList';
 import styleBdayCell from './styleBdayCell/styleBdayCell';
