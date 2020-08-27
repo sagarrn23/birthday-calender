@@ -1,12 +1,13 @@
-const days = ['bcal-sun', 'bcal-mon', 'bcal-tue', 'bcal-wed', 'bcal-thu', 'bcal-fri', 'bcal-sat'];
+import { selectors } from '../selectors/selectors';
+
 
 const styleBdayCell = (finalData) => {
     const dayBdayCount = {};
+    const days = selectors.days;
+    
     finalData.forEach(el => {
         dayBdayCount[el.day] = (dayBdayCount[el.day] || 0) + 1
     });
-
-    console.log(dayBdayCount);
 
     for(const [key, value] of Object.entries(dayBdayCount)) {
         const fraction = Math.ceil(Math.sqrt(value));

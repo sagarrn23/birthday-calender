@@ -1,13 +1,19 @@
-const showList = (finalData) => {
-    const days = ['bcal-sun', 'bcal-mon', 'bcal-tue', 'bcal-wed', 'bcal-thu', 'bcal-fri', 'bcal-sat'];
+import { selectors } from '../selectors/selectors';
 
-    document.querySelectorAll('.bcal-ppl').forEach(el => el.innerHTML = '');
+const showList = (finalData) => {
+    const days = selectors.days;
+
+    selectors.cellsWrapper.forEach(el => el.innerHTML = '');
 
     finalData.forEach(person => {
-        const listNode = document.createElement("LI");
-        const textNode = document.createTextNode(person.alias);
-        listNode.appendChild(textNode);
-        document.querySelector(`.${days[person.day]}`).appendChild(listNode);
+        try {
+            const listNode = document.createElement("LI");
+            const textNode = document.createTextNode(person.alias);
+            listNode.appendChild(textNode);
+            document.querySelector(`.${days[person.day]}`).appendChild(listNode);
+        } catch {
+            alert('something wrong with json date');
+        }
     });
 }
 

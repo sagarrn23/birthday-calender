@@ -10,7 +10,7 @@
         margin-right: 15px;
         margin-bottom: 15px;
 
-        &:last-child {
+        &:first-child {
             margin-right: auto;
         }
 
@@ -28,7 +28,7 @@
         color: #dedede;
     }
 
-    .bcal-ppl {
+    .bcal-cells {
         width: 175px;
         height: 175px;
         background-color: #fff;
@@ -52,8 +52,15 @@
         }
 
         &:empty {
+            @include squareGrid(--bcal-default);
+            background-color: nth($colors, 1);
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
             &:before {
-                content: 'No Birthday';
+                content: attr(data-none);
+                display: inline-flex;
+                align-items: center;
                 justify-content: center;
             }
         }

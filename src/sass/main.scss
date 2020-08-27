@@ -20,10 +20,15 @@
 .bcal-input-wrap {
     margin-top: 40px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     .bcal-data {
-        width: 60%;
-        margin-right: 40px;
+        width: 55%;
+        // margin-right: 40px;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
         textarea {
             width: 100%;
             min-height: 400px;
@@ -35,10 +40,18 @@
 
     .bcal-year {
         width: 40%;
+        @media screen and (max-width: 768px) {
+            margin-top: 40px;
+            width: 100%;
+            text-align: center;
+        }
         div {
             display: flex;
             flex-direction: column;
             margin-bottom: 40px;
+            @media screen and (max-width: 768px) {
+                align-items: center;
+            }
         }
         span {
             text-transform: capitalize;
