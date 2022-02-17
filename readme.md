@@ -1,6 +1,7 @@
 Project build with the Vanilla Javascript. Parcel bundler used for the bundling. Site hosted with github pages.
 
 You can see the demo of the project on - https://sagarchaudhari.me/birthday-calender
+Use content from data.json file
 
 Local installation process:-
 1) git clone https://github.com/sagarrn23/birthday-calender.git
